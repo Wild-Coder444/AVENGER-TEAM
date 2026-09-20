@@ -1,0 +1,156 @@
+* {
+  padding: 0px;
+  margin: 0%;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(
+    70deg,
+    rgb(208, 0, 250),
+    rgb(255, 68, 0),
+    rgb(255, 0, 230)
+  );
+}
+
+.head {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    45deg,
+    rgb(208, 15, 222),
+    rgb(70, 34, 162),
+    rgb(99, 237, 205)
+  );
+  border: 3px solid black;
+  border-radius: 10px;
+}
+.main {
+  display: flex;
+}
+.box {
+  height: 90vh;
+  width: 30%;
+  position: relative;
+
+  margin: 1rem;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px rgb(2, 5, 158);
+}
+
+.image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#img1 {
+  height: 100%;
+  width: 100%;
+  animation: photo1 9s ease 0s infinite;
+}
+#img2 {
+  height: 100%;
+  width: 100%;
+  animation: photo2 9s ease 0s infinite;
+}
+#img3 {
+  height: 100%;
+  width: 100%;
+  animation: photo3 9s ease 0s infinite;
+}
+@media (max-width: 440px) {
+  .main {
+    flex-direction: column;
+  }
+  .box {
+    height: 90vh;
+    width: 100%;
+    margin: 0%;
+  }
+}
+@keyframes photo1 {
+  0% {
+    z-index: 5;
+  }
+  33% {
+    z-index: 5;
+  }
+  34% {
+    z-index: 1;
+  }
+  100% {
+    z-index: 1;
+  }
+}
+
+@keyframes photo2 {
+  0% {
+    z-index: 1;
+  }
+  33% {
+    z-index: 1;
+  }
+  34% {
+    z-index: 5;
+  }
+  66% {
+    z-index: 5;
+  }
+  67% {
+    z-index: 1;
+  }
+  100% {
+    z-index: 1;
+  }
+}
+
+@keyframes photo3 {
+  0% {
+    z-index: 1;
+  }
+  66% {
+    z-index: 1;
+  }
+  67% {
+    z-index: 5;
+  }
+  100% {
+    z-index: 5;
+  }
+}
+
+.intro {
+  background: linear-gradient(80deg, #812fc4, #000000, rgb(42, 124, 97));
+  width: 50em;
+  margin: 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding-left: 1.5em;
+  border-radius: 20px;
+}
+p {
+  font-size: 2.2em;
+  filter: drop-shadow(0px 0px 12px rgb(217, 56, 56));
+  text-align: center;
+  color: rgb(255, 0, 0);
+}
+@media (max-width: 440px) {
+  .intro {
+    width: 100%;
+    margin: 0%;
+  }
+  p {
+    font-size: 1em;
+  }
+}
+
+.footer {
+  margin-top: 1em;
+  width: 100%;
+  height: 10vh;
+  background-color: rgb(112, 108, 108);
+}
